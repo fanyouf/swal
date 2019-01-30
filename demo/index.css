@@ -302,17 +302,138 @@ template {
   display: none;
 }
 /**
-  下面是我自己加的
-  */
-ul,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+   *  add 
+   */
 h1,
 h2,
 h3,
-h4 {
-  padding-left: 1em;
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2em;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.col {
+  margin: 1em;
+  padding: 1em;
+}
+.col-1 {
+  width: 10%;
+  margin: 1em;
+  padding: 1em;
+}
+.col-2 {
+  width: 20%;
+  margin: 1em;
+  padding: 1em;
+}
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+.br {
+  border-radius: 0.1em;
+}
+.m5 {
+  margin: 5px;
+}
+.p5 {
+  padding: 5px;
+}
+.pl5 {
+  padding-left: 5px;
+}
+.flexa {
+  display: flex;
+  justify-content: space-around;
+}
+.flexb {
+  display: flex;
+  justify-content: space-between;
+}
+.c-timeline {
+  padding: 1em;
+}
+.c-timeline dt,
+.c-timeline dl,
+.c-timeline dd {
+  margin: 0;
+  padding: 0;
+}
+.c-timeline dt {
+  margin: 1.5em 0;
+  font-size: 1.2rem;
+}
+.c-timeline dd {
+  line-height: 1.8;
+  word-wrap: break-word;
+}
+.c-timeline dd a {
+  color: #2479cc;
+}
+.c-timeline dd span {
+  font-size: 0.8rem;
+}
+.c-footer {
+  width: 98%;
+  margin: auto;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  line-height: 3rem;
+}
+.c-card {
+  color: #47A7E7;
+  padding: 1em;
+  border-radius: 0.2em;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+}
+.c-card-title {
+  font-style: italic;
+  color: red;
+}
+.c-board {
+  box-sizing: content-box;
+  padding: 1em;
+  border-radius: 0.2em;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+}
+.c-board-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.c-board-col10 {
+  padding: 5px;
+  outline: 1px solid #ccc;
+  flex: 1 1 100%;
+}
+.c-board-col3 {
+  padding: 5px;
+  outline: 1px solid #ccc;
+  flex: 1 1 30%;
+}
+.c-board-col4 {
+  padding: 5px;
+  outline: 1px solid #ccc;
+  flex: 1 1 40%;
+}
+.c-board-col5 {
+  padding: 5px;
+  outline: 1px solid #ccc;
+  flex: 1 1 50%;
+}
+.c-board-col6 {
+  padding: 5px;
+  outline: 1px solid #ccc;
+  flex: 1 1 40%;
 }
