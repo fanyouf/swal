@@ -312,7 +312,8 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  line-height: 1.2em;
+  line-height: 1.1em;
+  font-weight: normal;
 }
 .row {
   display: flex;
@@ -358,6 +359,14 @@ h6 {
 .flexb {
   display: flex;
   justify-content: space-between;
+}
+.mr5 {
+  margin-right: 5px;
+}
+.nowrap {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .c-timeline {
   padding: 1em;
@@ -436,4 +445,103 @@ h6 {
   padding: 5px;
   outline: 1px solid #ccc;
   flex: 1 1 40%;
+}
+.c-simple-good {
+  transition: all 0.2s linear;
+  width: 100px;
+  padding: 2em;
+  position: relative;
+  float: left;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.c-simple-good .flag {
+  position: absolute;
+  top: 0;
+  font-size: 0.8em;
+  left: 50%;
+  padding: 0 0.5em;
+  text-align: center;
+  transform: translateX(-50%);
+  color: #fff;
+}
+.c-simple-good .flag-saleoff {
+  width: 2em;
+  background-color: #e53935;
+}
+.c-simple-good .flag-saleoff::after {
+  content: "9.5折";
+  color: #fff;
+}
+.c-simple-good .flag-new {
+  width: 2em;
+  background-color: #83c44e;
+}
+.c-simple-good .flag-new::after {
+  content: "新品";
+  color: #fff;
+}
+.c-simple-good p {
+  margin: 0;
+}
+.c-simple-good:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+.c-simple-good:hover .comment-box {
+  transform: translateY(0);
+}
+.c-simple-good .c-good-img {
+  display: flex;
+  flex: 1 1 auto;
+}
+.c-simple-good .c-good-img .good-img {
+  width: 100%;
+}
+.c-simple-good .c-good-img .good-pic-link {
+  margin: auto;
+}
+.c-simple-good .title {
+  color: #ccc;
+  line-height: 1.2;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+.c-simple-good .info {
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0  0 1em;
+  font-size: 0.8em;
+}
+.c-simple-good .price {
+  color: #ff6700;
+}
+.c-simple-good .comment-box {
+  text-decoration: none;
+  padding: 0.5em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  transform: translateY(100%);
+  transition: transform 0.5s;
+  background-color: #ff6700;
+}
+.c-simple-good .comment-box .content {
+  color: #fff;
+  font-weight: normal;
+}
+.c-simple-good .comment-box .from {
+  font-size: 0.8em;
+  line-height: 1.1em;
+  color: #ffffff;
 }

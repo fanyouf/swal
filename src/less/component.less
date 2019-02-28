@@ -1,5 +1,5 @@
 @import "color.less";
-
+@import "helper.less";
 .c-timeline{
     padding: 1em;
     dt,dl,dd{margin:0;padding:0}
@@ -73,5 +73,104 @@
         padding:5px;
         outline: 1px solid #ccc;
         flex:1 1 40%;
+    }
+}
+
+@light-color:#ff6700;
+@width:100px;
+.c-simple-good{
+    .flag{
+        position: absolute;
+        top:0;
+        font-size: 0.8em;
+        left: 50%;
+        padding:0 0.5em;
+        text-align: center;
+        transform: translateX(-50%);
+        color:#fff;
+    }
+    .flag-saleoff{
+        width: 2em;
+        background-color: #e53935;
+    }
+    .flag-saleoff::after{
+        content: "9.5折";
+        color:#fff;
+    }
+    .flag-new{
+        width: 2em;
+        background-color: #83c44e;
+    }
+    .flag-new::after{
+        content: "新品";
+        color:#fff;
+    }
+    transition: all .2s linear;
+    width: @width;
+    padding:2em;
+    p{margin:0;}
+    position: relative;
+    float: left;
+    background-color: #fff;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    &:hover{
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        transform: translateY(-1px);
+        .comment-box{
+            transform: translateY(0);
+        }
+    }
+    .c-good-img{
+        display:flex;
+        flex:1 1 auto;
+        .good-img{
+            width: 100%;
+        }
+        .good-pic-link{
+            margin: auto;
+        }
+    }
+    .title{
+        color:#ccc;
+        line-height: 1.2;
+        margin:0;
+        .nowrap;
+        .tc;
+        width: 100%;
+       
+    }
+    .info{
+        color: #ccc;
+        line-height: 1.5;
+        margin:0  0 1em;
+        font-size: 0.8em;
+    }
+    .price{
+        color:@light-color;
+    }
+    .comment-box{
+        text-decoration: none;
+        padding:0.5em;
+        position: absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        height: 3em;
+        transform: translateY(100%);
+        transition: transform .5s;
+        background-color: @light-color;
+        .content{
+            color:#fff;
+            font-weight: normal;
+        }
+        .from{
+            font-size: 0.8em;
+            line-height: 1.1em;
+            color:lighten(#fff,10%);
+        }
     }
 }
