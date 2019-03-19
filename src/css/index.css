@@ -6,7 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -18,10 +18,11 @@ html {
    * Remove the margin in all browsers.
    */
 body {
-  font-size: 16px;
+  font-size: 14px;
   margin: 0;
-  color: #58666e;
+  color: #1a2a3a;
   font-family: "Hiragino Sans GB", "Microsoft Yahei", SimSun, Helvetica, Arial, Sans-serif;
+  background-color: #eee;
 }
 /**
    * Correct the font size and margin on `h1` elements within `section` and
@@ -62,6 +63,11 @@ pre {
    */
 a {
   background-color: transparent;
+  text-decoration: none;
+  color: #1a2a3a;
+}
+a:hover {
+  color: #000000;
 }
 /**
    * 1. Remove the bottom border in Chrome 57-
@@ -301,9 +307,15 @@ template {
 [hidden] {
   display: none;
 }
-/**
-   *  add 
-   */
+ul,
+li,
+dl,
+dt,
+dd {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 h1,
 h2,
 h3,
@@ -312,7 +324,7 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  line-height: 1.1em;
+  line-height: 1.1;
   font-weight: normal;
 }
 .row {
@@ -321,18 +333,18 @@ h6 {
   justify-content: center;
 }
 .col {
-  margin: 1em;
-  padding: 1em;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 .col-1 {
   width: 10%;
-  margin: 1em;
-  padding: 1em;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 .col-2 {
   width: 20%;
-  margin: 1em;
-  padding: 1em;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 .tc {
   text-align: center;
@@ -346,11 +358,20 @@ h6 {
 .m5 {
   margin: 5px;
 }
+.mb1 {
+  margin-bottom: 1rem;
+}
+.mr1 {
+  margin-right: 1rem;
+}
 .p5 {
   padding: 5px;
 }
 .pl5 {
   padding-left: 5px;
+}
+.flex {
+  display: flex;
 }
 .flexa {
   display: flex;
@@ -367,6 +388,91 @@ h6 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+.c-d1 {
+  color: #f78585;
+}
+.c-d2 {
+  color: #d9534f;
+}
+.c-d3 {
+  color: #00a67c;
+}
+.c-list {
+  padding: 1rem;
+  background-color: #fff;
+}
+.c-list .c-list-title {
+  color: #00a67c;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #00a67c;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+}
+.c-list .c-item-title {
+  font-size: 1.5rem;
+  color: #00a67c;
+}
+.c-list .c-item-title a {
+  color: #00a67c;
+}
+.c-list .c-item-content {
+  line-height: 1.5rem;
+}
+.c-list .c-item-meta {
+  font-size: 0.9rem;
+}
+.c-list-with-img .c-list-item {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  margin-top: 1rem;
+}
+.c-list-with-img .c-list-item:last-child {
+  margin-bottom: 0px;
+  border-bottom: none;
+}
+.c-list-with-img .c-img-area {
+  float: left;
+  margin: 0.8rem 1.5rem 0.5rem 0;
+}
+.c-list-with-img .c-item-content {
+  margin-top: 0.8rem;
+}
+.c-list-with-img .c-item-meta {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.c-list-rank {
+  counter-reset: section;
+}
+.c-list-rank .item-title:before {
+  counter-increment: section;
+  /* 增加计数器值 */
+  content: counter(section);
+  /* 显示计数器 */
+}
+.c-list-simple .c-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.c-list-simple .item-meta {
+  margin: 0;
+}
+.c-list-simple .c-item-title {
+  font-size: 1rem;
+}
+@media only screen and (max-width: 500px) {
+  .c-img-area {
+    display: none;
+  }
+  .c-list-with-img .c-item-meta {
+    position: initial;
+    text-align: right;
+  }
 }
 .c-timeline {
   padding: 1em;
@@ -391,15 +497,40 @@ h6 {
 .c-timeline dd span {
   font-size: 0.8rem;
 }
+.c-header {
+  width: 100%;
+  background-color: #4a4a4a;
+  line-height: 4rem;
+}
+.c-header .link {
+  color: #eee;
+  margin-right: 2rem;
+}
+.c-header .link:hover {
+  color: #f78585;
+}
+.c-header .current {
+  color: #f78585;
+}
+.c-header .c-container-inner {
+  padding: 0 0.5rem;
+}
+.c-container-inner {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 500px) {
+  .c-header {
+    position: sticky;
+  }
+}
 .c-footer {
-  width: 98%;
-  margin: auto;
   border-top: 1px solid #ccc;
   text-align: center;
   line-height: 3rem;
+  height: 5rem;
 }
 .c-card {
-  color: #47A7E7;
   padding: 1em;
   border-radius: 0.2em;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
@@ -518,7 +649,7 @@ h6 {
 .c-simple-good .info {
   color: #ccc;
   line-height: 1.5;
-  margin: 0  0 1em;
+  margin: 0 0 1em;
   font-size: 0.8em;
 }
 .c-simple-good .price {
@@ -544,4 +675,26 @@ h6 {
   font-size: 0.8em;
   line-height: 1.1em;
   color: #ffffff;
+}
+.c-layout-2c {
+  display: flex;
+}
+.c-layout-2c .c-layout-sidebar {
+  flex-basis: 20rem;
+  margin: 0 0.5rem 0.5rem;
+}
+.c-layout-2c .c-layout-main {
+  flex: 1;
+  margin: 0 0.5rem 0.5rem;
+}
+@media only screen and (max-width: 500px) {
+  .c-layout-2c {
+    flex-direction: column;
+  }
+  .c-layout-2c .c-layout-sidebar {
+    flex: 1;
+  }
+  .c-layout-2c .c-layout-main {
+    flex: 1;
+  }
 }

@@ -1,0 +1,30 @@
+.c-header {
+  width: 100%;
+  background-color: @c-bgc-mod2;
+
+  line-height: 4rem;
+
+  .link {
+    color: @c-bgc-body;
+    margin-right: 2rem;
+  }
+  .link:hover {
+    color: @c-decorate-1;
+  }
+  .current {
+    color: @c-decorate-1;
+  }
+  .c-container-inner {
+    padding: 0 0.5rem;
+  }
+}
+.c-container-inner {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: @width-phone) {
+  .c-header {
+    position: sticky;
+  }
+}

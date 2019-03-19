@@ -1,0 +1,23 @@
+.c-layout-2c {
+  display: flex;
+  .c-layout-sidebar {
+    flex-basis: 20rem;
+    margin: 0 0.5rem 0.5rem;
+  }
+  .c-layout-main {
+    flex: 1;
+    margin: 0 0.5rem 0.5rem;
+  }
+}
+
+@media only screen and (max-width: @width-phone) {
+  .c-layout-2c {
+    flex-direction: column;
+    .c-layout-sidebar {
+      flex: 1;
+    }
+    .c-layout-main {
+      flex: 1;
+    }
+  }
+}

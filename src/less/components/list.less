@@ -1,0 +1,80 @@
+.c-list {
+  padding: 1rem;
+  background-color: @c-bgc-mod1;
+  .c-list-title {
+    color: @c-body-title;
+    font-size: @fs-big1;
+    border-bottom: 1px solid @c-body-title;
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+  }
+
+  .c-item-title {
+    font-size: @fs-h1;
+    color: @c-body-title;
+    a {
+      color: @c-body-title;
+    }
+  }
+  .c-item-content {
+    line-height: 1.5rem;
+  }
+  .c-item-meta {
+    font-size: @fs-low1;
+  }
+}
+.c-list-with-img {
+  .c-list-item {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    margin-top: 1rem;
+    &:last-child {
+      margin-bottom: 0px;
+      border-bottom: none;
+    }
+  }
+  .c-img-area {
+    float: left;
+    margin: 0.8rem 1.5rem 0.5rem 0;
+  }
+  .c-item-content {
+    margin-top: 0.8rem;
+  }
+  .c-item-meta {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+.c-list-rank {
+  counter-reset: section;
+  .item-title:before {
+    counter-increment: section; /* 增加计数器值 */
+    content: counter(section); /* 显示计数器 */
+  }
+}
+.c-list-simple {
+  .c-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .item-meta {
+    margin: 0;
+  }
+  .c-item-title {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .c-img-area {
+    display: none;
+  }
+  .c-list-with-img .c-item-meta {
+    position: initial;
+    text-align: right;
+  }
+}
