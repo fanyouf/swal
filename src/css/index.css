@@ -389,6 +389,9 @@ h6 {
   white-space: nowrap;
   overflow: hidden;
 }
+.c-body-title {
+  color: #00a67c;
+}
 .c-d1 {
   color: #f78585;
 }
@@ -400,55 +403,77 @@ h6 {
 }
 .c-list {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
 }
 .c-list .c-list-title {
   color: #00a67c;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border-bottom: 1px solid #00a67c;
-  padding: 0.5rem 0;
-  margin: 0.5rem 0;
+  padding: 0 0 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.c-list .c-list-title a {
+  color: #00a67c;
 }
 .c-list .c-item-title {
-  font-size: 1.5rem;
-  color: #00a67c;
+  font-size: 1.2rem;
 }
-.c-list .c-item-title a {
-  color: #00a67c;
+.c-list .c-list-item {
+  margin: 0.5rem 0;
+}
+.c-list .c-list-item:last-child {
+  margin-bottom: 0;
 }
 .c-list .c-item-content {
   line-height: 1.5rem;
 }
 .c-list .c-item-meta {
   font-size: 0.9rem;
+  margin: 0;
+}
+.c-list-inline {
+  display: block;
+}
+.c-list-inline .c-list-item {
+  display: inline-block;
+  margin-right: 1rem;
 }
 .c-list-with-img .c-list-item {
   overflow: hidden;
   position: relative;
   margin-bottom: 1rem;
   border-bottom: 1px solid #ccc;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .c-list-with-img .c-list-item:last-child {
   margin-bottom: 0px;
   border-bottom: none;
 }
+.c-list-with-img .c-list-item:hover .item-img {
+  transform: scale(1.03);
+}
+.c-list-with-img .item-img {
+  transition: transform 0.5s;
+}
 .c-list-with-img .c-img-area {
   float: left;
   margin: 0.8rem 1.5rem 0.5rem 0;
+  overflow: hidden;
 }
 .c-list-with-img .c-item-content {
   margin-top: 0.8rem;
 }
 .c-list-with-img .c-item-meta {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   right: 0;
 }
 .c-list-rank {
   counter-reset: section;
 }
-.c-list-rank .item-title:before {
+.c-list-rank .c-item-title:before {
   counter-increment: section;
   /* 增加计数器值 */
   content: counter(section);
@@ -529,6 +554,16 @@ h6 {
   text-align: center;
   line-height: 3rem;
   height: 5rem;
+}
+.c-badge {
+  display: inline;
+  padding: 0.2rem;
+  border-radius: 0.8rem;
+  margin-left: 0.2rem;
+  background-color: #f78585;
+}
+.c-list-item:hover .c-badge {
+  background-color: #d9534f;
 }
 .c-card {
   padding: 1em;
